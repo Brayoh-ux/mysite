@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+nav{
+    
+    font-family: 'Poppins', sans-serif;
+    height: 110px;
+    background: rgb(4, 15, 36);
+    padding-top: 3vmin;
+    padding: 5px;
+}
+
+nav h1{
+    position: absolute;
+    width: 200px;
+    top: 8px;
+    line-height: 50px;
+    left: 5%;
+    color: #fff;
+    padding-bottom: 12px;
+    font-weight: 800;
+    z-index: 1;
+    margin: 3vmin;
+    display: inline-block;
+
+}
+
+nav ul {
+    float: right;
+    margin-right: 25px;
+    list-style: none;
+   
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 3vmin;
+}
+nav ul li a:hover{
+    box-shadow: 0 0 5px #33ffff,
+                0 0 5px #66ffff;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+nav ul li a{
+    position: relative;
+    padding: 8px ;
+    color: #fff;
+    font-size: 18px;
+    margin: 3vmin;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: cyan;
+    text-decoration: none;
+}
+
+label #sign-1,
+label #sign-2{
+    font-size: 30px;
+    color: #fff;
+    right: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    position: absolute;
+    margin-right: 30px;
+    display: none;
+}
+
+#res-menu{
+    display: none;
+}
+
+@media (max-width:939px){
+    label #sign-1{
+        display: block;
+        position: absolute;
+        right: 40px;
+        opacity: 1;
+        color: white;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(3, 11, 26);
+        left: -100%;
+        text-align: center;
+        transition: .5s;
+        z-index: 10;
+        overflow: hidden;
+        top: 7vmin;
+    }
+    nav ul li{
+        display: block;
+        margin: 60px 0;
+        line-height: 60px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    #res-menu:checked ~ ul{
+        left: 0;
+    }
+    #res-menu:checked ~ label #sign-1{
+        display: none;
+    }
+    #res-menu:checked ~ label #sign-2{
+        display: block;
+    }
+}
+
+@media (max-width:350px){
+    nav ul{
+        top: 15vmin;
+    }
+    nav h1{
+        font-size: 20px;
+    }
+    label #sign-1, label #sign-2{
+        font-size: 20px;
+        margin-right: 12px;
+    }
+}
+
+@media (min-width: 351px) and (max-width: 500px ){
+    nav ul{
+        top: 10vmin;
+    }
+}
